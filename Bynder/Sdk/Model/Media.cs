@@ -129,12 +129,6 @@ namespace Bynder.Sdk.Model
         public string Type { get; set; }
 
         /// <summary>
-        /// Generated thumbnails for the media
-        /// </summary>
-        [JsonProperty("thumbnails")]
-        public Thumbnails Thumbnails { get; set; }
-
-        /// <summary>
         /// Video preview Urls
         /// </summary>
         [JsonProperty("videoPreviewURLs")]
@@ -219,5 +213,10 @@ namespace Bynder.Sdk.Model
         [JsonExtensionData]
         public Dictionary<string, JToken> PropertyOptionsDictionary { get; set; }
 
+        /// <summary>
+        /// Public derivatives for this media item.
+        /// </summary>
+        [JsonProperty("thumbnails")]
+        public Dictionary<string, string> Thumbnails { get; set; }
     }
 }
